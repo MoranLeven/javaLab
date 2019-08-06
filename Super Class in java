@@ -1,0 +1,35 @@
+// use of super keyword in java
+class box{
+    private double width, height, depth;
+    box(double w, double h, double d)
+    {
+        width = w ;
+        height = h;
+        depth = d;
+         
+    }
+    double vloume()
+    {
+        return width*height*depth;
+    }
+}
+
+class boxweight extends box{
+    double weight;
+    boxweight(double w, double h, double d, double m){
+        super (w,d,h);
+        weight = m;
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Program to check how *super* key works (:-");
+	boxweight a = new boxweight(4345,5623423,32476,899);
+	double vol= a.vloume();
+    System.out.println("Volume of the box:  "+ vol);
+    System.out.println("Weight of box: "+ a.weight);
+	}
+}
